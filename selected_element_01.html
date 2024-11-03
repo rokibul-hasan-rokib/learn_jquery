@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select All Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .email-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .email-item {
+            padding: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Email Messages</h2>
+
+    <!-- "Select All" Checkbox -->
+    <label>
+        <input type="checkbox" id="select-all"> Select All
+    </label>
+
+    <!-- List of Individual Email Checkboxes -->
+    <ul class="email-list">
+        <li class="email-item">
+            <label>
+                <input type="checkbox" class="email-checkbox"> Email 1
+            </label>
+        </li>
+        <li class="email-item">
+            <label>
+                <input type="checkbox" class="email-checkbox"> Email 2
+            </label>
+        </li>
+        <li class="email-item">
+            <label>
+                <input type="checkbox" class="email-checkbox"> Email 3
+            </label>
+        </li>
+        <li class="email-item">
+            <label>
+                <input type="checkbox" class="email-checkbox"> Email 4
+            </label>
+        </li>
+    </ul>
+
+    <button id="delete-selected">Delete Selected Emails</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- jQuery Script -->
+     <script>
+        $(document).ready(function() {
+            $('#select-all').on('change', function() {
+                var isChecked = $(this).is(':checked');
+                $('.email-checkbox').prop('checked', isChecked);
+            });
+
+            $('.email-checkbox').on('change', function() {
+                var allChecked = $('.email-checkbox').length === $('.email-checkbox:checked').length;
+                $('#select-all').prop('checked', allChecked);
+            });
+
+            $('#delete-selected').on('click', function() {
+                var selectedEmails = $('.email-checkbox:checked').parent().parent();
+                if (selectedEmails.length > 0) {
+                    selectedEmails.remove();
+                    alert('Selected emails have been deleted.');
+                } else {
+                    alert('No emails selected.');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
