@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Example</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar Container */
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: #f7f9fc;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Logo Section */
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .logo img {
+      width: 40px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1f8dd6;
+    }
+
+    /* Search Section */
+    .search-box {
+      display: flex;
+      flex-grow: 1;
+      max-width: 500px;
+      margin-right: 20px;
+      position: relative;
+    }
+
+    .search-box input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px 0 0 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-box button {
+      padding: 10px 20px;
+      background-color: #1f8dd6;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .search-box button:hover {
+      background-color: #0e77b7;
+    }
+
+    /* Navbar Links */
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://via.placeholder.com/40" alt="Logo">
+      <span>WhatIsMyIPAddress</span>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" placeholder="Enter Keywords or IP Address...">
+      <button>Search</button>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Press</a>
+      <a href="#">Podcast</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Layout Example</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f7f9fc;
+    }
+
+    /* Card Container */
+    .card-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 1200px;
+    }
+
+    /* Card Styles */
+.card {
+  flex: 1;
+  max-width: 250px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Blue overlay effect flowing from top to bottom */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.3); /* Blue with 0.3 opacity */
+  transition: top 0.3s ease; /* Set the transition for the top property */
+}
+
+.card:hover::before {
+  top: 0; /* Move the overlay from the top to cover the entire card */
+}
+
+.card h3, .card img, .card p {
+  position: relative;
+  z-index: 1;
+}
+
+
+    .card:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <h3>IP Look Up</h3>
+      <img src="https://via.placeholder.com/50" alt="IP Look Up Icon">
+      <p>Know the IP address of another computer? You can find where in the world it is and more.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h3>Trace Email</h3>
+      <img src="https://via.placeholder.com/50" alt="Trace Email Icon">
+      <p>Track down the geographical location and origin of an email you received.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h3>Hide My IP</h3>
+      <img src="https://via.placeholder.com/50" alt="Hide My IP Icon">
+      <p>Learn how to use a high-tech "middleman" to shield your real IP address on the internet.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <h3>VPN Comparison</h3>
+      <img src="https://via.placeholder.com/50" alt="VPN Comparison Icon">
+      <p>Compare top-rated VPN service providers that meet your needs and budget.</p>
+    </div>
+  </div>
+
+</body>
+</html>
