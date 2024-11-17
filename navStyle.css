@@ -1,0 +1,121 @@
+
+.bg{
+  background-color: rgb(9, 9, 158);
+}
+.search-input {
+  border-radius: 50px;
+  box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.5); /* Red shadow */
+  width: 250px; /* Adjust width as needed */
+  transition: box-shadow 0.3s ease;
+}
+.search-input:focus {
+  box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.7); /* Slightly stronger shadow on focus */
+  outline: none;
+}
+.btn-signin {
+  border-radius: 50px;
+  color: white;
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+.btn-search{
+  border-radius: 50px;
+  color: white;
+  background-color: rgb(7, 7, 117);
+  transition: background-color 0.3s ease;
+}
+.btn-signin:hover {
+  background-color: rgba(
+    0,
+    0,
+    255,
+    0.3
+  ); /* Blue with 0.3 opacity on hover */
+}
+.carousel-inner {
+  height: 400px; /* Adjust the height of the carousel */
+}
+.carousel-item img {
+  object-fit: cover; /* Ensure images cover the space without stretching */
+  height: 100%; /* Ensure images fill the entire height of the carousel */
+  width: 50%; /* Ensure images fill the entire width of the carousel */
+}
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-info {
+  padding: 15px;
+  position: relative;
+}
+
+.price, .rating {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.price {
+  color: #28a745;
+  font-size: 1.2em;
+}
+
+.rating {
+  color: #ffc107;
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+.description {
+  margin: 10px 0;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+
+.wishlist {
+  font-size: 1.5em;
+  color: #ff4081;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist:hover {
+  color: #e91e63;
+}
