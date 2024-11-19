@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+    <style>
+        footer {
+            background-color: #002c5a; 
+            color: white; 
+            padding: 20px 0;
+            height: 20rem;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            max-width: 1200px;
+            width: 100%; 
+            padding: 0 15px;
+        }
+        
+        .footer-container div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-container p,
+        .footer-container h2,
+        .footer-container h4 {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .footer-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .footer-container h4 {
+            font-size: 18px;
+        }
+
+        a {
+            color: #ffd700; /* Gold color for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        hr.bold {
+            border: 0; /* Remove default border */
+            height: 5px; /* Control height of the line */
+            width: 100%; /* Default width */
+            max-width: 100px;
+            background-color: #d81515; /* Set a custom color */
+            margin: 20px auto; /* Center the hr and add vertical spacing */
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            hr.bold {
+                height: 3px; /* Thinner on smaller screens */
+                width: 80%; /* Narrower on smaller screens */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            hr.bold {
+                height: 2px; /* Even thinner on extra-small screens */
+                width: 70%; /* Further narrower */
+            }
+        }
+        .footer-hr {
+            display: flex; 
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: 10rem; /* Full height (optional, adjust as needed) */
+            text-align: center; /* Center-align the text */
+            background-color: #f4f4f4; /* Optional background for visibility */
+        }
+    
+        .footer-hr h1 {
+            margin: 0; /* Remove default margin */
+            font-size: 2rem; /* Adjust font size */
+        }
+    
+        .footer-hr .bold {
+            border: 0;
+            height: 4px; 
+            width: 40rem; 
+            max-width: 12rem;
+            background-color: #333;
+            margin: 10px 0;
+        }     
+    </style>
+</head>
+<body>
+<div class="footer-hr">
+    <h1>Footer Section</h1>
+    <hr class="bold">
+</div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <p>© 2024 MyWebsite</p>
+                <p>All Rights Reserved</p>
+            </div>
+            <div>
+                <h2>About Us</h2>
+                <p>Providing quality services since 2020.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Email: contact@mywebsite.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
