@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alibaba-style Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+            color: #ff6a00;
+        }
+        .navbar-brand:hover {
+            color: #ff6a00;
+        }
+        .search-bar {
+            width: 50%;
+        }
+        .search-btn {
+            background-color: #ff6a00;
+            color: white;
+            border: none;
+        }
+        .flag-icon {
+            width: 20px;
+            height: 15px;
+        }
+        .sign-btn {
+            background-color: #ff6a00;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Alibaba.com</a>
+            <div class="d-flex align-items-center w-100">
+                <div class="input-group search-bar me-3">
+                    <select class="form-select" style="max-width: 100px;">
+                        <option>Products</option>
+                        <option>Suppliers</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button class="btn search-btn">Search</button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <span class="me-2">Deliver to:</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg" alt="BD Flag" class="flag-icon me-2">
+                    <span class="me-3">BD</span>
+                    <span class="me-3">English-BDT</span>
+                    <a href="#" class="me-3 btn">Sign in</a>
+                    <button class="btn sign-btn">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
