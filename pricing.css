@@ -1,0 +1,2187 @@
+:root {
+    --primary-color: rgb(0, 112, 224);
+    --purple-color: rgba(1, 0, 125, 0.9);
+    --main-text-color: rgb(79, 79, 79);
+    --light-text-color: rgb(104, 112, 140);
+    --nav-link-color: rgb(0, 22, 53);
+    --footer-link-color: rgb(150, 177, 205);
+    --input-border-color: rgb(208, 208, 208);
+    --input-border-radius: 4px;
+    --support-text-color: rgb(3, 24, 73);
+    --main-box-shadow: 0px 0px 8px 2px #64646415;
+    --button-border-radius: 54px;
+    --spacing: 16px;
+    --primary-button-border-radius: 5px;
+    --input-padding: 12px;
+    --layout-gap: 16px;
+}
+
+/* // global styles // */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+
+/* .container{
+  padding-top: 100px;
+} */
+body {
+    position: relative;
+    background: #f9fbff;
+}
+
+.textPrimary {
+    color: var(--primary-color) !important;
+}
+
+.bgPrimary {
+    background-color: var(--primary-color);
+}
+
+.borderPrimary {
+    border: 1px solid var(--primary-color) !important;
+}
+
+.primaryButton {
+    /* padding: 0.7rem 1rem; */
+    margin-left: 1rem;
+    border: none;
+    border-radius: var(--primary-button-border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.textWhite {
+    color: #fff;
+}
+
+.bgWhite {
+    background-color: #fff;
+}
+
+.rightAlign {
+    text-align: right;
+}
+
+.centerAlign {
+    text-align: center;
+}
+
+.itemsCenter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizontalLine {
+    height: 1px;
+    background-color: rgb(230, 233, 250);
+    width: 100px;
+    margin: 24px;
+}
+
+/* // form related styles //  */
+.formBox {
+    max-width: 484px;
+    width: 90%;
+    /* min-height: 100vh;
+    height: 100%; */
+    /* min-height: 80vh; */
+    height: unset;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 30px 0 30px; */
+}
+
+.authForm input {
+    border: none !important;
+}
+
+.formBox h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.inputBox {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    color: var(--light-text-color);
+    margin-bottom:15px;
+}
+.password-input .inputBox{
+    margin-bottom:5px;
+}
+
+.inputBox i {
+    padding: var(--input-padding);
+    font-size: 20px;
+}
+
+.formBox input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: var(--input-padding);
+    padding-left: 0;
+    outline: none;
+}
+
+.formBox p {
+    /* font-size: 18px; */
+    font-size: 15px;
+    color: var(--light-text-color);
+    margin-bottom: 0;
+
+}
+
+
+/* .formBox .centerAlign {
+    margin-top: 20px;
+} */
+
+.authButton {
+    width: 100%;
+    margin-top: 20px;
+    /* padding: var(--input-padding); */
+    padding: 10px;
+    border: none;
+    /* border-radius: var(--button-border-radius); */
+    border-radius: var(--input-border-radius);
+    cursor: pointer;
+}
+.input-group-container {
+    text-align: left;
+}
+/* // nav styles //  */
+
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 30px 5%; */
+    padding: 15px 6%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+}
+
+.navbarLogo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+}
+.navbarLogo img{
+    max-width: 200px;
+    max-height: 45px;
+}
+
+.logoDark {
+    font-weight: 600;
+}
+
+.navbarLinks {
+    display: flex;
+    list-style: none;
+}
+
+.navbarLinks li {
+    margin-left: 1.5rem;
+}
+
+.navbarLinks a,
+.navbarButtons a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--nav-link-color);
+}
+
+.navbarLinks a:hover,
+.navbarButtons a:hover {
+    color: var(--primary-color);
+}
+
+.navbarButtons {
+    display: flex;
+    align-items: center;
+    gap: var(--layout-gap);
+}
+
+.hamburgerMenu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburgerMenu div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+.pricingContainer,
+.checkoutPage {
+    min-height: 60vh;
+    margin-top: 70px;
+    padding: 0;
+    /*background: linear-gradient(180.00deg, rgb(238, 245, 255), rgb(250, 251, 255) 100%);*/
+}
+
+.banner {
+    text-align: center;
+    padding-top: 80px;
+    margin: auto;
+    background: linear-gradient(180deg, #eef5ff 0%, #fafbff 100%);
+}
+
+.bannerTitle {
+    font-size: 46px;
+    margin-bottom: 36px;
+}
+
+.bannerTitle .pricingTitle {
+    border-bottom: 1px solid var(--nav-link-color);
+    padding-bottom: 8px;
+    white-space: nowrap;
+}
+
+.bannerDescription {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: rgb(1, 56, 113);
+}
+
+.bannerTabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.bannerTabs button,
+.cardCategory {
+    padding: 0.5rem 1rem;
+    border: none;
+    width: fit-content;
+    background-color: rgba(238, 245, 255, 1);
+    border-radius: var(--primary-button-border-radius);
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.bannerTabs button:hover {
+    box-shadow: var(--main-box-shadow);
+}
+
+.bannerTabs button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.bannerTabs span {
+    padding: 0.5rem 1rem;
+    border: none;
+    width: fit-content;
+    border-radius: var(--primary-button-border-radius);
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.bannerTabs button.active span {
+    color: white;
+}
+
+label img {
+    width: 150px;
+    height: 75px;
+    object-fit: scale-down;
+    margin-left: auto;
+    margin-right: 0;
+    border: 2px solid #eeeeee;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.payment-method-label {
+    background: white;
+    margin: 5px 0;
+    box-shadow: var(--main-box-shadow);
+    padding: 5px 50px;
+    border-radius: var(--primary-button-border-radius);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.payment-method-label.selected {
+    position: relative;
+}
+
+.payment-method-label.selected::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(93, 95, 239, 0.5);
+    border-radius: var(--primary-button-border-radius);
+}
+
+.apply-button {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    padding: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    border: 1px solid var(--primary-color);
+}
+
+.apply-button:hover {
+    background: transparent !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+}
+
+.coupon-input {
+    border-radius: 5px 0 0 5px !important;
+    border-right: none !important;
+}
+
+/* // footer styles // */
+
+.footer {
+    background-color: #001529;
+    color: #fff;
+    padding-top: 60px;
+}
+
+.footerSection {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footerContent {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footerSection {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footerSection h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footerSection ul {
+    list-style-type: none;
+}
+
+.footerSection ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footerSection ul li a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footerSection ul li a:hover {
+    color: #ffffff;
+}
+
+.getInTouch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2a3f5f;
+}
+
+.getInTouch p {
+    font-size: 20px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contactInfo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.contactIcons a {
+    background-color: var(--primary-color);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+form .newsletter {
+    display: flex;
+    padding: 6px;
+    background-color: #fff;
+    border-radius: var(--primary-button-border-radius);
+}
+
+.newsletter input[type="email"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    border-radius: var(--primary-button-border-radius);
+}
+
+.contactInfo {
+    display: flex;
+    gap: 1rem;
+}
+
+.contactInfo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-top: 1px solid #2a3f5f;
+    font-size: 0.9rem;
+    color: var(--footer-link-color);
+}
+
+/* // pricing cards styles //  */
+.pricingCardsContainer {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    padding: 80px 0;
+}
+
+.pricingCards {
+    background-color: #fff;
+    padding: 30px 30px 75px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: var(--main-box-shadow);
+}
+
+.pricingCards:hover {
+    box-shadow: var(--main-box-shadow);
+}
+
+.pricingCards h2 {
+    margin: var(--spacing) auto;
+    font-weight: 400;
+    font-size: 36px;
+    color: rgb(2, 1, 90);
+}
+
+.pricingCards p {
+    margin: var(--spacing) auto;
+    font-size: 14px;
+    color: var(--light-text-color);
+}
+
+.pricingCards .pricing {
+    /*font-weight: 900;*/
+    /*font-size: 32px;*/
+    color: var(--primary-color);
+}
+
+.rotate-45 {
+    transform: rotate(-45deg);
+}
+
+button.btn-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.pricingCards h2 sub {
+    font-size: 16px;
+    position: relative;
+}
+
+.product-details-popup-buy-button {
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    border-radius: 8px;
+    padding: 8px 0;
+    transition: 0.3s all ease-in-out;
+}
+
+.product-popup-details {
+    color: #808080;
+    font-size: 14px;
+    border-top: 1px solid #e1e9fc;
+    border-bottom: 1px solid #e1e9fc;
+}
+
+.product-popup-feature-list {
+    font-size: 13px;
+    color: #656565;
+    margin: 0;
+}
+
+input#product-popup-quantity {
+    width: 75px;
+    text-align: center;
+    padding: 4px 0;
+    border: 1px solid silver;
+}
+
+#product-popup-quantity:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button#product-details-popup-increase-button {
+    padding: 0 12px;
+    border: 1px solid silver;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background: rgba(0, 0, 255, 0.05);
+}
+
+button#product-details-popup-decrease-button {
+    padding: 0 12px;
+    border: 1px solid silver;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    background: rgba(0, 0, 255, 0.05);
+}
+
+.product-popup-table th,
+.product-popup-table td {
+    color: #656565;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.product-popup-details p {
+    padding: 0;
+    margin: 0;
+}
+
+.product-details-popup-buy-button:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.pricingCards h2 sub::before {
+    content: "/";
+    position: absolute;
+    left: -10px;
+    font-size: 24px;
+    font-weight: 500;
+    bottom: 15px;
+}
+
+.pricingCardsFeatures {
+    padding: 0;
+}
+
+.pricingCardsFeatures li {
+    list-style: none;
+}
+
+.pricingCardsFeatures li p {
+    color: var(--purple-color);
+    margin: 6px 0 !important;
+}
+
+.pricingCardsFeatures i {
+    font-size: 20px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.purchaseButton {
+    /*width: 75%;*/
+    /*gap: 10px;*/
+    /*font-size: 14px;*/
+    /*font-weight: 500;*/
+    /*padding: var(--input-padding);*/
+    /*border: none;*/
+    /*border-radius: var(--primary-button-border-radius);*/
+    /*cursor: pointer;*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*bottom: 0;*/
+    /*transform: translate(-50%, -50%);*/
+    width: 60%;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: var(--input-padding);
+    border: none;
+    border-radius: var(--primary-button-border-radius);
+    cursor: pointer;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    transform: translateY(-50%);
+}
+
+.view-details-button {
+    width: 18%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: var(--input-padding);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--primary-button-border-radius);
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    transform: translateY(-50%);
+    transition: 0.3s all ease-in-out;
+}
+
+.view-details-button:hover {
+    background-color: var(--primary-color);
+    color: #fff !important;
+}
+
+.purchaseButton:hover {
+    background-color: var(--primary-color);
+    color: #fff !important;
+}
+
+/* // checkout page styles // */
+
+.box {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 2.99px 8.96px 0px rgba(0, 0, 0, 0.14);
+    background: rgb(249, 251, 255);
+}
+
+.checkoutPageContainer {
+    width: 90%;
+    margin: auto;
+    padding: 120px 0;
+}
+
+.checkoutPageHeading {
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.checkoutFormSectionTitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.checkoutForm {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+.span-6 {
+    grid-column: span 6;
+}
+
+.span-12 {
+    grid-column: span 12;
+}
+
+.checkoutFormLeftSideLayout {
+    grid-column: span 7;
+}
+
+.checkoutFormRightSideLayout {
+    grid-column: span 5;
+}
+
+.addressDetails,
+.paymentDetails {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.addressDetailsFormField,
+.userCardDetailsFormField {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0 20px;
+}
+
+.billingDetails,
+.DiscountDetails,
+.addressDetails {
+    grid-column: span 5;
+    padding: 26px;
+}
+
+.billingDetails {
+    margin: 30px 0;
+}
+
+/* // input fields styles // */
+
+.span-12 {
+    grid-column: span 12 !important;
+}
+
+.userInputWrap {
+    position: relative;
+    width: 100%;
+    grid-column: span 6;
+}
+
+.userInputWrap .inputText {
+    width: 100%;
+    outline: none;
+    padding: 16px 10px;
+    margin: 0px !important;
+    border-radius: 6px;
+    border: 1px solid var(--input-border-color);
+    box-shadow: none !important;
+    background-color: rgb(249, 251, 255);
+}
+
+.userInputWrap .inputText:focus {
+    border-color: var(--primary-color);
+    border-width: 2px;
+}
+
+.userInputWrap .floatingLabel {
+    position: absolute;
+    pointer-events: none;
+    top: 36px;
+    left: 10px;
+    background-color: rgb(249, 251, 255);
+    transition: 0.2s ease all;
+    color: var(--light-text-color);
+}
+
+.userInputWrap input:focus ~ .floatingLabel,
+.userInputWrap input:not(:focus):valid ~ .floatingLabel {
+    top: 13px;
+    left: 10px;
+    padding: 0 28px 0 10px;
+    font-size: 13px;
+    opacity: 1;
+}
+
+.checkboxContainer {
+    margin-top: 20px;
+}
+
+/* // payment styles // */
+
+.paymentOption {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.paymentHeader {
+    padding: 15px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paymentHeader.paymentActive {
+    background-color: #e6f3ff;
+}
+
+.paymentContent {
+    display: none;
+}
+
+.paymentContent p {
+    padding: 15px;
+}
+
+.paymentContent.paymentActive {
+    display: block;
+    padding: 15px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"] ,
+input[type="password"]{
+    width: 100%;
+    padding: 6px 8px;
+    /* padding: 8px; */
+    /* margin-top: 5px;
+    margin-bottom: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.login label{
+    font-size: 14px;
+}
+.cardIcons {
+    display: flex;
+    gap: 10px;
+}
+
+.cardIcons img {
+    height: 30px;
+}
+
+.securityText {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.securityText i {
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--primary-color);
+}
+
+.paymentDescription {
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* // billing summary // */
+
+.dropdownToggle {
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdownContent {
+    display: none;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.billingSummaryToggle,
+.discountToggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown #discountCodesToggle,
+.dropdown #billingSummaryToggle {
+    border: none;
+    background-color: transparent;
+}
+
+.dropdownContent,
+.summaryContent {
+    margin-top: 20px;
+}
+
+.summaryContent {
+    display: none;
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.orderComment {
+    margin-top: 15px;
+}
+
+.orderComment label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.orderComment textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.order-summary-table th,
+.order-summary-table td {
+    padding: 12px 10px;
+}
+
+.checkout-product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: scale-down;
+}
+
+.policy {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.policy label {
+    font-size: 0.85em;
+}
+
+.policy input {
+    margin-right: 10px;
+}
+
+.policy a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.payButton {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.payButton:hover {
+    background-color: #0056b3;
+}
+
+.removeLink {
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.removeLink:hover {
+    text-decoration: underline;
+}
+
+/* // support container page styles // */
+
+.supportPage {
+    background: linear-gradient(
+        180deg,
+        rgb(238, 245, 255),
+        rgb(250, 251, 255) 100%
+    );
+    width: 100%;
+    border: 1px solid transparent;
+    /* max-height: 100vh;
+    overflow: hidden; */
+}
+
+.supportPageContainer {
+    width: 90%;
+    height: fit-content;
+    margin: 16px auto;
+    background: rgb(249, 251, 255);
+    border: 1.16px solid rgb(220, 237, 255);
+    border-radius: 8px;
+}
+
+.ticketContainer {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.ticketList {
+    grid-column: span 3;
+    border-left: 1px solid rgb(220, 237, 255);
+    border-right: 1px solid rgb(220, 237, 255);
+}
+
+.ticketBox {
+    /* height: calc(100vh - 270px); */
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+.replySection .form-control:focus {
+    /* color: var(--bs-body-color); */
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: unset;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: unset;
+}
+
+.sidebar {
+    grid-column: span 7;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.userDetailsBox {
+    grid-column: span 4;
+    padding: 0 12px 12px;
+}
+
+.supportMessageBox {
+    grid-column: span 8;
+    background-color: rgb(239, 245, 255);
+    height: 100%;
+    /* padding: 16px; */
+}
+
+.emptyContent {
+    color: var(--support-text-color);
+    grid-column: span 12;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.emptyContent h2 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.emptyContent p {
+    font-size: 21px;
+}
+
+.headerDropdown {
+
+    border-bottom: 1px solid rgb(220, 237, 255);
+}
+
+.supportDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.supportDropdownToggle {
+    cursor: pointer;
+    /* padding: 12px 16px; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.headerDropdown {
+    padding: 10px 16px;
+}
+
+.supportDropdownContent {
+    display: none;
+    position: absolute;
+    border: 1.16px solid rgb(220, 237, 255);
+    background-color: rgb(236, 240, 250);
+    width: 100%;
+    z-index: 1;
+}
+
+.supportDropdownContent a {
+    color: black;
+    /* padding: 12px 16px; */
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.supportDropdownContent a:hover {
+    background-color: #f1f1f1;
+}
+
+.ticket {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout .select2-container--default .select2-selection--single {
+    height: calc(3.5rem + 2px); /* Same height as .form-select */
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.checkout
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    line-height: 3.5rem; /* Align the text vertically */
+}
+
+.checkout .form-floating > .select2-container > .select2-selection {
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    height: auto;
+}
+
+.checkout .form-floating .select2-container--focus .select2-selection {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Placeholder color */
+.checkout
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__placeholder {
+    color: #6c757d;
+}
+
+/* Adjust floating label */
+.checkout .form-floating > label {
+    top: -0.75rem;
+    left: 0.75rem;
+    padding: 0 0.25rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+    pointer-events: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.checkout
+    .form-floating
+    .select2-container--default
+    .select2-selection--single:focus
+    + label {
+    top: -1.5rem;
+    font-size: 0.75rem;
+    color: #0d6efd;
+}
+
+.checkout
+    .form-floating
+    .select2-container--default
+    .select2-selection--single:not(:placeholder-shown)
+    + label {
+    top: -1.5rem;
+    font-size: 0.75rem;
+    color: #0d6efd;
+}
+
+.checkout
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: #545454;
+}
+
+.checkout-price-text {
+    color: #545454;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.coupon-error-msg {
+    position: absolute;
+    bottom: -26px;
+}
+
+.ticketIcon {
+    /* width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 10px; */
+
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 12px;
+
+}
+
+.ticketDetails {
+    flex: 1;
+}
+
+.ticketTitle {
+    color: var(--support-text-color);
+    font-size: 14px;
+}
+
+.ticketTitle span {
+    color: var(--primary-color);
+}
+
+.headline .ticketTitle {
+    font-weight: 500;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 16px;
+    padding: 16px;
+    border-bottom: 1px solid rgb(220, 237, 255);
+}
+
+.ticketInfo {
+    font-size: 12px;
+    margin-top: 2px;
+    color: var(--light-text-color);
+}
+
+.sidebar img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* userInformation styles */
+.userInformationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(220, 237, 255);
+}
+
+.userInformationHeader .tabs {
+    border: none;
+}
+
+.userInformationHeader .tabs button {
+    font-size: 12px !important;
+    padding-bottom: 16px;
+}
+
+.userInformationHeader .headerIcons {
+    display: flex;
+    gap: 6px;
+}
+
+.active {
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+.userContent {
+    /* padding-top: 16px; */
+    /* height: calc(100vh - 260px);
+  overflow-y: auto; */
+}
+
+.userSection {
+    margin-bottom: 16px;
+    border: 1px solid rgb(220, 237, 255);
+}
+
+.custom-form-group {
+    position: relative;
+}
+
+.custom-form-group label {
+    font-size: 12px;
+    color: var(--light-text-color);
+}
+
+.custom-form-group .fa-star-of-life {
+    font-size: 8px;
+}
+
+.custom-form-group .validation-error {
+    color: red;
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    font-size: 13px;
+}
+
+.sectionContent {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.userSectionTitle {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+.userInformationField .label,
+.sectionContent .label {
+    color: var(--light-text-color);
+    font-size: 12px;
+}
+
+.userInformationField .value {
+    color: var(--nav-link-color);
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+.slaItem {
+    display: flex;
+    align-items: center;
+}
+
+.sectionContent .value {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.slaDot {
+    width: 8px;
+    height: 8px;
+    background-color: #28a745;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.userInformationField select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none !important;
+}
+
+.userInformationCheckboxField {
+    display: flex;
+    align-items: center;
+}
+
+.userInformationCheckboxField input {
+    margin-right: 5px;
+}
+
+/* // chat box styles // */
+
+.chatContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.chatHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.chatHeader .profileIcon {
+    width: 34px;
+    height: 34px;
+}
+
+.profileIcon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.chatName {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.chatMessages {
+    padding: 16px;
+    /* height: calc(100vh - 426px); */
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.messageContent {
+    background-color: #fff;
+    /* padding: 12px 16px; */
+    padding: 7px 10px;
+    border-radius: 6px;
+    max-width: 80%;
+    font-size: 14px;
+}
+
+.message.received .messageContent {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.messageTime {
+    font-size: 12px;
+    color: #65676b;
+}
+
+.messageTimeRight {
+    text-align: right;
+}
+
+.messageTimeLeft {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.messageGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.messageGroup .message.sent {
+    margin-top: 16px;
+}
+
+.messageGroup .message.received {
+    margin-bottom: 8px;
+}
+
+.replySection {
+    width: 95%;
+    margin: 10px auto;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+    /* flex: 1; */
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #2c3e50;
+    font-weight: bold;
+    border-bottom: 2px solid #2c3e50;
+}
+
+.messageBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-left: 16px;
+    background-color: white;
+    padding: 3px 8px 8px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    color: #888;
+    margin-right: 10px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.replySection textarea {
+    flex: 1;
+    border: none;
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.sendButton {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    /* padding: 10px 20px;
+  font-size: 16px; */
+    padding: 6px 11px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sendButton:hover {
+    background-color: #0056b3;
+}
+
+/*
+************* email **********
+*/
+
+.order-detail-email,
+.survey-email {
+    background-color: rgb(249, 251, 255);
+    padding: 0;
+}
+
+.order-detail-email table,
+.survey-email table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.order-detail-email .container,
+.survey-email .container {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.order-detail-email .logo,
+.survey-email .logo h1 {
+    font-size: 24px;
+    color: rgb(0, 112, 224);
+    font-weight: bold;
+}
+
+.order-detail-email .content,
+.survey-email .content {
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.order-detail-email .ctaButton,
+.survey-email .ctaButton {
+    background-color: rgb(0, 112, 224);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 24px;
+    display: inline-block;
+}
+
+.order-detail-email .ctaButton:hover,
+.survey-email .ctaButton:hover {
+    background-color: #004aad;
+}
+
+.order-detail-email .footer,
+.survey-email .footer,
+.approve-email .footer {
+    font-size: 12px;
+    background-color: transparent;
+}
+
+.survey-email .content p,
+.order-detail-email p,
+.approve-email p {
+    margin: 16px 0;
+}
+
+.modal label,
+.modal .form-select,
+.modal .form-control,
+.modal button,
+.create-ticket label,
+.create-ticket .form-select,
+.create-ticket .form-control,
+.create-ticket button {
+    font-size: 14px;
+}
+
+.modal .fa-star-of-life,
+.create-ticket .fa-star-of-life {
+    font-size: 8px;
+}
+
+/* Match the appearance of the first input field */
+.select2-container--default .select2-selection--single {
+    background-color: var(
+        --input-bg
+    ); /* Same background color as the text input */
+    border: none; /* Match border */
+    border-radius: 4px; /* Match the border-radius */
+    height: 34px; /* Set the same height */
+    padding-left: 10px; /* Add padding inside the dropdown */
+    box-shadow: none; /* Remove any default shadow */
+    border: 1px solid #ccc;
+}
+
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    line-height: 34px;
+}
+
+/* Style the dropdown arrow */
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 34px; /* Match the height of the input field */
+}
+
+/* Adjust the hover/focus effect to match the input field */
+.select2-container--default .select2-selection--single:hover,
+.select2-container--default .select2-selection--single:focus {
+    border-color: #999; /* Match hover effect of the input field */
+    font-size: 14px;
+}
+
+/* Ensure the dropdown width matches the input field */
+.select2-container {
+    width: 100% !important; /* Force Select2 to take the full width */
+}
+
+/* Style the Select2 dropdown menu */
+.select2-container--default .select2-results__option {
+    background-color: #fff; /* White background for dropdown items */
+    color: #333; /* Set text color */
+    font-size: 14px;
+}
+
+/* Style the highlighted option in the dropdown */
+.select2-container--default .select2-results__option--highlighted {
+    background-color: #d9eaff; /* Match the focus color */
+    color: #333;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: #ccc;
+}
+
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__placeholder {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.jodit-wysiwyg {
+    min-height: 350px !important;
+}
+
+.approve-email table {
+    border-spacing: 0;
+    width: 100%;
+    background-color: rgb(249, 251, 255);
+    margin: 20px auto;
+}
+
+.approve-email td {
+    padding: 0;
+}
+
+.approve-email img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.approve-email .container {
+    text-align: center;
+    padding: 20px;
+}
+
+.approve-email .container h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.approve-email .container h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.approve-email .textBlue {
+    color: rgb(0, 112, 224);
+}
+
+.approve-email .logo span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px 14px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(0, 112, 224);
+}
+
+.approve-email .emailBody {
+    margin: 46px auto;
+}
+
+.approve-email .emailBody p {
+    line-height: 20px;
+}
+
+.approve-email .container .appDescription {
+    color: rgb(102, 102, 102);
+    max-width: 50%;
+    margin: 0 auto;
+    line-height: 22px;
+}
+
+.approve-email .container a {
+    line-height: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.approve-email .appButtons img {
+    width: 114px;
+    height: 34px;
+}
+
+.approve-email .footer {
+    color: rgb(153, 153, 153);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.approve-email .appButtons {
+    margin: 20px 0;
+}
+
+.approve-email hr {
+    border: none;
+    width: 120px;
+    border-top: 1px solid rgba(0, 0, 0, 0.24);
+    margin: 20px auto;
+}
+
+.approve-email .flex,
+.SocialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.approve-email .SocialIcons {
+    margin: 10px 0 20px;
+}
+
+.approve-email .SocialIcons a img {
+    width: 18px;
+    height: 18px;
+}
+
+.approve-email h2 {
+    margin: 20px 0;
+}
+.account-nav-dropdown li{
+    padding: 8px 4px;
+    text-align: center;
+    cursor: pointer;
+}
+.account-nav-dropdown li:not(:last-child) {
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 5px;
+}
+.account-nav-dropdown li:last-of-type:hover {
+   color: var(--primary-color);
+}
+
+.approve-email img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.approve-email .container {
+    text-align: center;
+    padding: 20px;
+}
+
+.approve-email .container h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.approve-email .container h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.approve-email .textBlue {
+    color: rgb(0, 112, 224);
+}
+
+.approve-email .logo span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px 14px;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(0, 112, 224);
+}
+
+.approve-email .emailBody {
+    margin: 46px auto;
+}
+
+.approve-email .emailBody p {
+    line-height: 20px;
+}
+
+.approve-email .container .appDescription {
+    color: rgb(102, 102, 102);
+    max-width: 50%;
+    margin: 0 auto;
+    line-height: 22px;
+}
+
+.approve-email .container a {
+    line-height: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.approve-email .appButtons img {
+    width: 114px;
+    height: 34px;
+}
+
+.approve-email .footer {
+    color: rgb(153, 153, 153);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.approve-email .appButtons {
+    margin: 20px 0;
+}
+
+.approve-email hr {
+    border: none;
+    width: 120px;
+    border-top: 1px solid rgba(0, 0, 0, 0.24);
+    margin: 20px auto;
+}
+
+.approve-email .flex,
+.SocialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.approve-email .SocialIcons {
+    margin: 10px 0 20px;
+}
+
+.approve-email .SocialIcons a img {
+    width: 18px;
+    height: 18px;
+}
+
+.approve-email h2 {
+    margin: 20px 0;
+}
+
+/*
+************* media **********
+*/
+@media (max-width: 1280px) {
+    .pricingCardsContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pricingCardsContainer {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbarLinks li {
+        margin-left: 1rem;
+    }
+
+    .pricingCardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* .supportPage {
+        max-height: 100%;
+    } */
+    /* .ticketList {
+    grid-column: span 10;
+    border-left: 1.16px solid rgb(220, 237, 255);
+    border-right: 1.16px solid rgb(220, 237, 255);
+    order: 2;
+  }
+
+  .sidebar {
+    grid-column: span 10;
+    order: 1;
+  } */
+}
+
+@media (max-width: 896px) {
+    .navbarLinks {
+        display: none;
+        text-align: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: fit-content;
+        background-color: #fff;
+        padding: 2rem;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        box-shadow: 0px 0px 8px 2px #64646415;
+    }
+
+    .navbarLinks.active {
+        left: 0;
+        display: flex;
+    }
+
+    .navbarLinks li {
+        margin: 1rem 0;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .hamburgerMenu.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-4px, 6px);
+    }
+
+    .hamburgerMenu.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburgerMenu.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-3px, -6px);
+    }
+
+    .navbarButtons {
+        display: none;
+    }
+
+    .bannerTabs {
+        flex-wrap: wrap;
+    }
+
+    .pricingCardsContainer {
+        gap: 25px;
+    }
+
+    .cardIcons img {
+        height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bannerTitle {
+        font-size: 32px;
+        margin-bottom: 36px;
+    }
+
+    .pricingCardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .getInTouch a,
+    .getInTouch p {
+        font-size: 16px;
+    }
+
+    .footerContent {
+        gap: 0px;
+    }
+
+    .footerContent {
+        flex-direction: column;
+    }
+
+    .getInTouch {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contactInfo,
+    .contactInfo {
+        margin-bottom: 1rem;
+    }
+
+    .checkoutFormRightSideLayout,
+    .checkoutFormLeftSideLayout {
+        grid-column: span 12;
+    }
+
+    .userInputWrap {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 640px) {
+    .pricingCardsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .supportMessageBox {
+        grid-column: span 12;
+    }
+
+    .userDetailsBox {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 560px) {
+    .bannerTitle {
+        font-size: 28px;
+        margin-bottom: 36px;
+    }
+
+    .chatContainer {
+        border-radius: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+}
