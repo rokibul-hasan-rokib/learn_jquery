@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animation</title>
     <style>
-        div {
-            position: relative; 
-            background-color: lightblue;
-            width: 100px;
-            height: 100px;
-        }
+      div {
+        position: relative;
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <button>Click</button>
     <div>
-        <p>Animation</p>
+      <p>Animation</p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $("button").click(function() {
-           $('div').animate({
-               left: '250px',
-               opacity: '0.5',
-               height: '150px',
-               width: '150px'    
-           });
+      $("button").click(function () {
+        $("div").animate({
+          left: "250px",
+          height: "+=150px",
+          width: "+=150px",
         });
+      });
     </script>
-</body>
+  </body>
 </html>
